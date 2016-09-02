@@ -10,5 +10,6 @@ send "iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT\r"
 send "iptables -A FORWARD -s 10.8.0.0/24 -j ACCEPT\r"
 send "iptables -A FORWARD -j REJECT\r"
 send "iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE\r"
+send "vpn\r"
 send "reset\r"
 interact
